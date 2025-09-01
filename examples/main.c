@@ -1,6 +1,7 @@
 #include "CNN.h"
+double avgRewards[] = {5,4,3,5};
 
 int main() {
-    double avgRewards[] = {5,4,3};
+
     return 0;
 }
