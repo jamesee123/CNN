@@ -1,4 +1,4 @@
-#include "headers.h"
+#include "CNN.h"
 
 void CNN_InitPerameters(struct CNN_AI* toInit) 
 {

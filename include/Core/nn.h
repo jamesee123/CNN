@@ -1,4 +1,4 @@
-#include "headers.h"
+#include "CNN.h"
 
 struct CNN_Structure 
 {

@@ -1,4 +1,4 @@
-#include "headers.h"
+#include "CNN.h"
 
 void CNN_ApplyAF(double* input, u_int16_t size, enum CNN_ActivationFunctions function)
 {
@@ -18,6 +18,10 @@ void CNN_ApplyAF(double* input, u_int16_t size, enum CNN_ActivationFunctions fun
             break;
         case Linear:
             CNN_Linear(input, size);
+            break;
+        default:
+            fprintf(stderr, "Activation function not found!");
+            exit(-1);
             break;
     }
 }
@@ -40,6 +44,10 @@ void CNN_ApplyAFDerivative(double* input, u_int16_t size, enum CNN_ActivationFun
             break;
         case Linear:
             CNN_dLinear(input, size);
+            break;
+        default:
+            fprintf(stderr, "Activation function not found!");
+            exit(-1);
             break;
     }
 }

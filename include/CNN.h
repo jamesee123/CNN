@@ -8,6 +8,7 @@
 #include <memory.h>
 #include <math.h>
 
+#include "Core/vector_tools.h"
 #include "Core/nn.h"
 #include "Core/backpropagation.h"
 #include "Core/activation_functions.h"

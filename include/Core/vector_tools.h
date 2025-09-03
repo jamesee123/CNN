@@ -1,4 +1,4 @@
-#include "headers.h"
+#include "CNN.h"
 
 void randomArray(double* arr, uint16_t n);
 void sumArrays(double* a1, double* a2, uint16_t c);

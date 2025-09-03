@@ -1,4 +1,4 @@
-#include "headers.h"
+#include "CNN.h"
 
 enum CNN_ActivationFunctions 
 {

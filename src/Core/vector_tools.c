@@ -1,4 +1,4 @@
-#include "headers.h"
+#include "CNN.h"
 
 void randomArray(double* output, uint16_t n) 
 {

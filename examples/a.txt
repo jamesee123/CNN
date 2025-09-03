@@ -1,0 +1,5 @@
+a(x) = ????;
+
+b(x);
+    x = -int(a) to +int(a)
+    int(a from -inf to x)
