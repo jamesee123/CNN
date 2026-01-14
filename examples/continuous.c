@@ -17,15 +17,18 @@ int main() {
     double* expectedRewards = DEEP_InitValues(10);
     uint32_t countPrevSelected[10] = {0,0,0,0,0,0,0,0,0,0};
     
-    for (uint32_t t = 0; t < INT32_MAX; t++) {
+    for (uint32_t t = 0; t < 10000; t++) {
         uint16_t choice = DEEP_UpperConfidenceBound(expectedRewards, countPrevSelected, 10, t+1, 2);
         double reward = calculateReward(choice);
         DEEP_UpdateValues(expectedRewards, choice, reward, 0.1);
-        if (t % 10000000 == 0) {
-            printf("%f%% done\n", (double)t/(double)INT32_MAX*100);
+
+        double offBy = 0;
+        for (int i = 0; i < 10; i++) {
+            offBy += fabs(avgRewards[i] - expectedRewards[i]);
         }
+
+        printf("%f\n", reward);
     }
-    printArray(expectedRewards, 10);
     free(expectedRewards);
     return 0;
 }
