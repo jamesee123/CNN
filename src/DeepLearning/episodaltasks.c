@@ -6,3 +6,4 @@ double* computeReturns(uint32_t k, double* rewards, double discountRate) {
         printf("%d", t);
     }
 }
+

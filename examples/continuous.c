@@ -1,9 +1,16 @@
+/*
+This example program trains a policy function in a k-armed bandit program.
+*/
+
 #include "CNN.h"
 #include "deeplearning.h"
 double avgRewards[] = {-1.7535404105646706, -0.3792807464971357, -0.022673601682935196, 0.2877342524833373, -2.219959456072523, 2.6369774068070644, 1.9621168025564124, 0.8283681617215288, -1.6972378121433693, 0.5236122759210953};
 uint8_t k = 10;
 
-double calculateReward(uint16_t choice) { //modified from online
+/*
+This function uses a normal distribution function to return a value around the reward assigned in the avgRewards array.
+*/
+double calculateReward(uint16_t choice) { //function modified from online
     double u = ((double) rand() / (RAND_MAX)) * 2 - 1;
     double v = ((double) rand() / (RAND_MAX)) * 2 - 1;
     double r = u * u + v * v;

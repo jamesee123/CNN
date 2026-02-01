@@ -1,3 +1,7 @@
+/*
+This program uses back propagation to train a neural network to learn a linear function with 3 inputs.
+*/
+
 #include <CNN.h>
 #include <time.h>
 #include <neat.h>

@@ -152,3 +152,4 @@ void CNN_dSoftmax(double* inp, uint16_t size)
     }
     memcpy(inp, output, sizeof(double)*size);
 }
+

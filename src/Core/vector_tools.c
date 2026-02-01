@@ -88,3 +88,4 @@ void normalize(double* arr, uint16_t n)
         arr[i] /= sum;
     }
 }
+
