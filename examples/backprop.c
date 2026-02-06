@@ -19,6 +19,7 @@ int main()
         double input[3];
         randomArray(input, 3);
         double expectedOutput[] = {input[0] + input[1] - input[2]*.001 + 3};
+        CNN_BackPropogate(ai, input, expectedOutput, .1);
         clock_t end = clock();
         double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
         printf("%f\n", time_spent);
